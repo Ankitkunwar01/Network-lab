@@ -7,11 +7,13 @@ public class twelve {
 
         while ((line = br.readLine()) != null) {
             String[] parts = line.split(" ");
-            System.out.println("IP: " + parts[0]);
-            System.out.println("Request: " + parts[1]);
-            System.out.println("Time: " + parts[3]);
+
+            System.out.println("IP: " + (parts.length > 0 ? parts[0] : "N/A"));
+            System.out.println("Request: " + (parts.length > 1 ? parts[1] : "N/A"));
+            System.out.println("Time: " + (parts.length > 3 ? parts[3] : "N/A"));
             System.out.println("---------------------");
         }
+
         br.close();
     }
 }
